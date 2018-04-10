@@ -242,8 +242,8 @@ export class Dialog implements AfterViewInit,OnDestroy {
             this.container.style.visibility = 'visible';
         }
         let viewport = this.domHandler.getViewport();
-        let x = Math.max((viewport.width - elementWidth) / 2, 0);
-        let y = Math.max((viewport.height - elementHeight) / 2, 0);
+        let x = Math.max(Math.floor((viewport.width - elementWidth) / 2), 0);
+        let y = Math.max(Math.floor((viewport.height - elementHeight) / 2), 0);
 
         this.container.style.left = x + 'px';
         this.container.style.top = y + 'px';
